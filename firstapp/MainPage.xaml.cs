@@ -16,6 +16,12 @@ namespace firstapp
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
         }
     }
 }
