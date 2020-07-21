@@ -4,7 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="firstapp.MainPage">
+             x:Class="firstapp.MainPage"
+             xmlns:local="clr-namespace:firstapp">
+    <!-- <ContentPage.BindingContext>
+        <local:MainPageViewModel />
+    </ContentPage.BindingContext> -->
     <ContentPage.Content>
         <Grid Margin="10, 30, 10, 25">
             <Grid.RowDefinitions>

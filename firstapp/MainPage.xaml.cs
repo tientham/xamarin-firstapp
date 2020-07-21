@@ -17,6 +17,8 @@ namespace firstapp
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+
+            BindingContext = new MainPageViewModel();
         }
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
