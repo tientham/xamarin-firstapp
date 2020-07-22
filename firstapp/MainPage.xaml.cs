@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,18 @@ namespace firstapp
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new HomePage());
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Debug.WriteLine("MainPage OnAppearing");
+        }
+
+        protected override void OnDisappearing()
+        { 
+            base.OnDisappearing();
+            Debug.WriteLine("MainPage OnDisappearing");
         }
     }
 }
