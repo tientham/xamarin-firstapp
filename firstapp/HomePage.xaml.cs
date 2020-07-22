@@ -11,6 +11,7 @@ namespace firstapp
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, true);
+            BindingContext = new HomePageViewModel();
         }
 
         protected override void OnAppearing()

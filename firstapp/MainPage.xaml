@@ -21,7 +21,7 @@
                        HorizontalOptions="Center"
                        VerticalOptions="CenterAndExpand"
                        FontAttributes="Bold" />
-                <Label Text="To Minh Tien" HorizontalOptions="Center"/>
+                <Label Text="{Binding Name}" HorizontalOptions="Center"/>
             </StackLayout>
             <Button Grid.Row="1"
                     Text="Let's start"
