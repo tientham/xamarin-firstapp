@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace firstapp
 {
@@ -9,9 +12,19 @@ namespace firstapp
         public HomePageViewModel()
         {
             Message = "Well done!";
+            ModifyLabelCommand = new Command(ModifyLabelCommandExecute);
         }
 
         public string Message { get; set; }
+
+        public ICommand ModifyLabelCommand { get; }
+
+        private void ModifyLabelCommandExecute(object obj)
+        {
+            Debug.WriteLine("Someone clicks into the button");
+            Message = "Hey! I am changed by someone!";
+            NotifyPropertyChanged(nameof(Message));
+        }
 
         #region Event handler
 

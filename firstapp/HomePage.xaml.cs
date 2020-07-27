@@ -25,5 +25,10 @@ namespace firstapp
             base.OnDisappearing();
             Debug.WriteLine("HomePage OnDisappearing");
         }
+
+        //void Button_Clicked(System.Object sender, System.EventArgs e)
+        //{
+        //    labelHomePage.Text = "Hey! I am modifed";
+        //}
     }
 }

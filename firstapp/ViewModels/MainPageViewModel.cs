@@ -1,6 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace firstapp
 {
@@ -9,9 +11,18 @@ namespace firstapp
         public MainPageViewModel()
         {
             Name = "To Minh Tien";
+            ModifyNameLabelCommand = new Command(ModifyNameLabelCommandExecute);
         }
 
         public string Name { get; set; }
+
+        public ICommand ModifyNameLabelCommand { get; }
+
+        private void ModifyNameLabelCommandExecute(object obj)
+        {
+            Name = "Minh Tien TO";
+            NotifyPropertyChanged("Name");
+        }
 
         #region Event handler
 
