@@ -3,11 +3,12 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using firstapp.ViewModels;
 using Xamarin.Forms;
 
 namespace firstapp
 {
-    public class HomePageViewModel : INotifyPropertyChanged
+    public class HomePageViewModel : BaseViewModel
     {
         public HomePageViewModel()
         {
@@ -25,27 +26,5 @@ namespace firstapp
             Message = "Hey! I am changed by someone!";
             NotifyPropertyChanged(nameof(Message));
         }
-
-        #region Event handler
-
-        /// <summary>
-        /// Occurs when the property is changed.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        #endregion
-
-        #region Methods
-
-        /// <summary>
-        /// The PropertyChanged event occurs when changing the value of property.
-        /// </summary>
-        /// <param name="propertyName">The PropertyName</param>
-        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        #endregion
     }
 }

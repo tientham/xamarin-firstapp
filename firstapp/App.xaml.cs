@@ -1,18 +1,15 @@
-﻿using System;
-using System.Diagnostics;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using System.Diagnostics;
 
 namespace firstapp
 {
-    public partial class App : Application
+    public partial class App : Xamarin.Forms.Application
     {
         public App()
         {
             InitializeComponent();
             Debug.WriteLine("---> Application InitializeComponent");
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new Xamarin.Forms.NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
